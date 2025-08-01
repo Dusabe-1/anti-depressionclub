@@ -1,162 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-    <style>
-       
-    
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIRO MOVIES</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("who killed sarah.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #222;
+    }
+
+    h1 {
+      background-color: royalblue;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    #inputField {
+      display: block;
+      margin: 20px auto;
+      height: 40px;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 20px;
+      border: 1px solid grey;
+      padding-left: 15px;
+      background-color: transparent;
+      color: brown;
+      transition: all ease 0.5s;
+    }
+
+    #inputField:focus {
+      outline: none;
+      border: 2px solid royalblue;
+    }
+
+    /* Keep your original button styles */
+    button {
+      margin-left: 10px;
+      padding: 10px;
+      border-radius: 12px;
+      background-color: transparent;
+      color: rgb(224, 224, 231);
+      border: 1px solid grey;
+      font-weight: bolder;
+      text-decoration: none;
+      transform: rotate(-5deg);
+      float: right;
+      margin-top: 10px;
+      margin-right: 20px;
+      transition: all ease 0.8s;
+    }
+
+    button:hover {
+      text-decoration: underline;
+      box-shadow: 2px 3px 3px 3px black;
+      transform: scale(1.2) rotate(35deg);
+    }
+
+    .images {
+      width: 95%;
+      max-width: 1200px;
+      margin: 100px auto 20px; /* leave space for floated buttons */
+      background-color: rgba(255,255,255,0.9);
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .images p {
+      text-align: center;
+      color: blue;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    #list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    #list li {
+      list-style: none;
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    #list img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    #list span {
+      display: block;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    #list a {
+      display: inline-block;
+      background-color: green;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    #list a:hover {
+      background-color: darkgreen;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      #inputField {
+        width: 90%;
+      }
+      button {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        transform: rotate(0deg); /* keep them readable on small screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.2rem;
+      }
+      #list {
+        grid-template-columns: 1fr;
+      }
+      button {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
+  
+  <h1>
+    <span style="color:orange; transform:rotate(-5deg)">H</span>
+    <span style="color:green;">I</span>
+    <span style="color:black;">R</span>
+    <span style="color:red; transform:rotate(-5deg)">O</span>
+    <span style="color:orange;">M</span>
+    <span style="color:green;">O</span>
+    <span style="color:black;">V</span>
+    <span style="color:red; transform:rotate(-5deg)">I</span>
+    <span style="color:black;">E</span>
+    <span style="color:red;">S</span>
+  </h1>
+
+  <input placeholder="Search..." type="text" id="inputField">
+
+  <button>REGISTER</button>
+  <button>LOGIN</button>
+  <button>HELP</button>
+  <button>SERVICES</button>
+
+  <div class="images">
+    <p>Watch all movies with HIRO MOVIES. If you encounter a problem, please don’t hesitate to contact us.</p>
     
-  <h1><span id="demo1">H</span><span id="demo2">I</span><span id="demo3">R</span><span id="demo4">O</span>
-    <span id="demo1">M</span><span id="demo2">O</span><span id="demo3">V</span><span id="demo4">I</span>
-<span id="demo3">E</span><span id="demo4">S</span></h1>
-    
-    <input placeholder="search..." type="text" name="" id="inputField" onkeyup="search()">
-   
-
-<button>REGISTER</button>
-<button>LOGIN</button>
-<button>HELP</button>
-<button>SERVICES</button>
-
-<div class="headImages">
-    <img id="head" src="paris has fallen.png" alt="">
-    <img src="paris has fallen.png" alt="">
-    <img src="paris has fallen.png" alt="">
-
-</div>
-
-
-
- 
-    <div class="images">
-   
-    <p>watch all movies with HIRO MOVIES  if you got problem <br>
-    please don't hesistate to call us</p>
-
-        <ul id="list">
-        <li>
-            <p id="container" >  
-            <img src="paris has fallen.png" alt=""><br>
-             <span>paris has fallen</span>
-            <a id="a1" href="paris.html">watch movies</a><br>
-
-           </p>
-        </li>
-
-        <li>
-            <p id="container" >  
-            <img src="who killed sarah.png" alt=""><br>
-             <span>Who killed sarah</span>
-            <a id="a1" href="sarah.html">watch movies</a><br>
-
-           </p>
-        </li>
-
-        <li>
-            <p id="container" >  
-            <img src="paris has fallen.png" alt=""><br>
-             <span>The idea of you</span>
-            <a id="a1" href="paris.html">watch movies</a><br>
-
-           </p>
-        </li>
-
-        <li>
-            <p id="container" >  
-            <img src="who killed sarah.png" alt=""><br>
-             <span>The fighter</span> <br> <span>by ROCKY</span><br>
-            <a id="a1" href="who killed sarah/sarah.html">watch movies</a><br>
-
-           </p>
-        </li>
-
-        <li>
-            <p id="container" >  
-            <img src="paris has fallen.png" alt=""><br>
-             <span>paris has fallen</span> <span>by ROCKY</span> <br>
-            <a id="a1" href="paris.html">watch movies</a><br>
-
-           </p>
-        </li>
-
-        <li>
-            <p id="container" >  
-            <img src="who killed sarah.png" alt=""><br>
-             <span>Who killed sarah</span>
-            <a id="a1" href="who killed sarah/sarah.html">watch movies</a><br>
-
-           </p>
-        </li>
-            <li>
-            <p id="container" >  
-            <img src="paris has fallen.png" alt=""><br>
-             <span>paris has fallen</span>
-            <a id="a1" href="paris has fallen/paris.html">watch movies</a><br>
-
-           </p>
-        </li>
-
-        <li>
-            <p id="container" >  
-            <img src="who killed sarah.png" alt=""><br>
-             <span>Who killed sarah</span>
-            <a id="a1" href="who killed sarah/sarah.html">watch movies</a><br>
-
-           </p>
-        </li>
-        
-            <li>
-            <p id="container" >  
-            <img src="paris has fallen.png" alt=""><br>
-             <span>paris has fallen</span>
-            <a id="a1" href="paris has fallen/paris.html">watch movies</a><br>
-
-           </p>
-        </li>
-
-        <li>
-            <p id="container" >  
-            <img src="who killed sarah.png" alt=""><br>
-             <span>Who killed sarah</span>
-            <a id="a1" href="who killed sarah/sarah.html">watch movies</a><br>
-
-           </p>
-        </li>
-        
-            <li>
-            <p id="container" >  
-            <img src="paris has fallen.png" alt=""><br>
-             <span>paris has fallen</span>
-            <a id="a1" href="paris has fallen/paris.html">watch movies</a><br>
-
-           </p>
-        </li>
-
-        <li>
-            <p id="container" >  
-            <img src="who killed sarah.png" alt=""><br>
-             <span>Who killed sarah</span>
-            <a id="a1" href="who killed sarah/sarah.html">watch movies</a><br>
-
-           </p>
-        </li>
-        
-        
-
-</ul>
-   </div>
-
-   
-
-
- <script src="main.js"></script>
+    <ul id="list">
+      <li>
+        <img src="paris has fallen.png" alt="">
+        <span>Paris Has Fallen</span>
+        <a href="paris has fallen/paris.html">Watch Movie</a>
+      </li>
+      <li>
+        <img src="who killed sarah.png" alt="">
+        <span>Who Killed Sarah</span>
+        <a href="who killed sarah/sarah.html">Watch Movie</a>
+      </li>
+      <li>
+        <img src="paris has fallen.png" alt="">
+        <span>The Idea of You</span>
+        <a href="paris has fallen/paris.html">Watch Movie</a>
+      </li>
+      <li>
+        <img src="who killed sarah.png" alt="">
+        <span>The Fighter by ROCKY</span>
+        <a href="who killed sarah/sarah.html">Watch Movie</a>
+      </li>
+    </ul>
+  </div>
 
 </body>
-
-</html>
+    </html>
