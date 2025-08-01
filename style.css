@@ -1,3 +1,150 @@
-body {
-    font-size: 15pt;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
 }
+ body{
+           background-image: url(who\ killed\ sarah.png);
+            
+        }
+        .headImages{
+            margin-left: 400px
+        }
+.headImages img{
+    
+           object-fit: cover;
+           height: 200px;
+           width: 50px;
+           border-radius: 20px;
+           transition: all ease-in-out 0.6s;
+           display: none;
+
+        }
+.headImages img:hover{
+    width: 300px;
+    
+}
+p{
+    padding-left: 30px;
+    padding-top: 20px;
+    color: blue;
+}
+
+
+#demo{
+    display: none;
+}
+#demo1{
+        color: orange;
+        transform: rotate(-5deg);
+        font-size: 30px;
+        }
+        #demo2{
+        color:green;
+         font-size: 30px;
+        }
+        #demo3{
+        color: black;
+         font-size: 30px;
+        }
+        #demo4{
+        color: red;
+         font-size: 30px;
+         transform: rotate(-5deg);
+        }
+
+        h1{
+            background-color: royalblue;
+            padding: 5px;
+            text-align: center;
+            
+        }
+        #inputField{
+        margin-left: 600px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        height: 40px;
+        width: 100px;
+        border-radius: 20px;
+        background-color: transparent;
+        border: 1px solid grey;
+        padding-left: 10px;
+        transition: all ease 1s;
+        color: brown;
+
+        }
+        #inputField:hover{
+            background-color: transparent;
+            color:white;
+            width: 300px;
+        }
+   
+    img{
+width: 350px;
+margin-left: 10px;
+padding-top: 20px;
+height: 300px;
+    }
+    button:hover{
+        padding-left: 40px;
+        padding-right: 40px;
+
+    }
+    .images{
+       width: 100%;
+       background-color: rgb(209, 218, 223);
+    
+       border-radius: 20px;
+     margin-left: 10px;
+     height: 1000px;
+
+    }
+    li{
+        list-style-type: none;
+    }
+    button{
+        margin-left: 10px;
+        padding: 10px;
+        border-radius: 12px;
+        background-color: transparent;
+        color: rgb(224, 224, 231);
+        border: 1px solid grey;
+        font-weight: bolder;
+        text-decoration: none;
+        transform: rotate(-5deg);
+        float: right;
+        margin-top: 10px;
+        margin-right:20px ;
+        transition: all ease 0.8s;
+       
+    }
+    button:hover{
+        text-decoration: underline;
+        box-shadow: 2px 3px 3px 3px black;
+        transform: scale(1.2);
+        transform: rotate(35deg);
+    }
+    #container{
+        position: relative;
+         top: 20px;
+        left: 40px;
+    }
+   #list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: relative;
+    grid-gap: 10px;
+    
+   }
+   li a{
+    background-color: rgb(24, 224, 24);
+    padding: 5px 50px 5px 50px;
+    margin-left: 58px;
+    text-decoration: none;
+    position: absolute;
+    top: 280px;
+    left: 70px;
+
+   }
+
